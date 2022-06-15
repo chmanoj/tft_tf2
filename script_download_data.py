@@ -50,7 +50,9 @@ import numpy as np
 import pandas as pd
 import pyunpack
 import wget
+import ssl
 
+ssl._create_default_https_context = ssl._create_unverified_context
 
 # General functions for data downloading & aggregation.
 def download_from_url(url, output_path):
