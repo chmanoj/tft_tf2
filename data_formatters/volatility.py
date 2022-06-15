@@ -180,7 +180,7 @@ class VolatilityFormatter(GenericDataFormatter):
 
     for col in column_names:
       if col not in {'forecast_time', 'identifier'}:
-        output[col] = self._target_scaler.inverse_transform(predictions[col])
+        output[col] = self._target_scaler.inverse_transform(predictions[[col]])
 
     return output
 
